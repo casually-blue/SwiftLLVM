@@ -9,7 +9,7 @@ import Foundation
 
 public struct BasicBlock: LLVMRepresentable {
     public var llvm: String {
-        return ""
+        return "\(label):"
     }
     
     let label: String

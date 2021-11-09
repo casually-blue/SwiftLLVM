@@ -26,4 +26,19 @@ final class FunctionTests: XCTestCase {
             """
         )
     }
+    
+    func testBasicFunctionWithBlocks() throws {
+        var f = Function(name: "test",
+                         resultType: TypeWithAttributes(.Integer(32)),
+                         paramTypes: [])
+        f.add(block: BasicBlock(label: "entry", instrs: []))
+        
+        XCTAssertEqual(
+            f.llvm,
+        """
+        define i32 @test () {
+        entry:
+        }
+        """)
+    }
 }
