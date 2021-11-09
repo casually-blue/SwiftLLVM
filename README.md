@@ -1,3 +1,3 @@
 # SwiftLLVM
 
-A description of this package.
+An implementation of the llvm code generator in swift
