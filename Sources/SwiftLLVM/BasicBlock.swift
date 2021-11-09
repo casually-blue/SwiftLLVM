@@ -7,7 +7,11 @@
 
 import Foundation
 
-public struct BasicBlock {
+public struct BasicBlock: LLVMRepresentable {
+    public var llvm: String {
+        return ""
+    }
+    
     let label: String
     let instrs: [Instruction]
 }

@@ -15,9 +15,9 @@ public struct Global: LLVMTranslationUnit {
         \(dllStorageClass.llvm) \(threadLocal.llvm) \
         \(localUnnamed.llvm) \(addrSpace != nil ? "addrspace(" + addrSpace!.description + ")" : "") \
         \(externallyInitialized ? "externally_initialied" : "") \
-        \(constant ? "constant" : "global") \(type.llvm) \(initializer ?? "")\
-        \(section != nil ? ", section \"" + section! + "\"" : "")\(align != nil ? ", align " + align!.description : "")
-        """.condenseWhiteSpace
+        \(constant ? "constant" : "global") \(type.llvm) \(initializer ?? "") \
+        \(section != nil ? ", section \"" + section! + "\"" : "") \(align != nil ? ", align " + align!.description : "")
+        """.condenseWhiteSpace.replacingOccurrences(of: " ,", with: ",")
     }
     
     public let name: String
