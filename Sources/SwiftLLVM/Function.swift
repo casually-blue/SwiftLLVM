@@ -11,4 +11,6 @@ public struct Function: LLVMTranslationUnit {
     public var llvm: String {
         return ""
     }
+    
+    public var basicBlocks: [BasicBlock] = []
 }
