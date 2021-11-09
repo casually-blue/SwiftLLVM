@@ -12,11 +12,12 @@ import XCTest
 
 final class ModuleTests: XCTestCase {
     func testBasicModule() throws {
+        var m = Module(name: "main")
+        m.add(try Global(name: "a", type: .Integer(32), initializer: "4"))
+        m.add(try Global(name: "b", type: .Integer(64), initializer: "12"))
+        
         XCTAssertEqual(
-            Module(elements: [
-                try Global(name: "a", type: .Integer(32), initializer: "4"),
-                try Global(name: "b", type: .Integer(64), initializer: "12")
-            ]).llvm,
+            m.llvm,
             """
             @a = global i32 4
             
