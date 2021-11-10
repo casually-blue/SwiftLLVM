@@ -1,5 +1,5 @@
 # SwiftLLVM 
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/casually-blue/SwiftLLVM?style=for-the-badge)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/casually-blue/SwiftLLVM)
 
 This is an implementation of the LLVM code generator in Swift
 
